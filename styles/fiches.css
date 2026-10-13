@@ -1,0 +1,517 @@
+/* CoC7 – Fiches investigateur thématiques — magisterphamtom
+   Même famille de thèmes que « Cartes de chat thématiques » et « Token Action HUD – Thèmes » :
+   Années 20, New York années 20, Montagnes Hallucinées, New York 2026, Antarctique 2026.
+   Ne touche que la fiche investigateur V3 qui porte la classe .c7ft + .c7ft-<thème>.
+   Chaque thème ne fait que définir des variables --ft-* ; la mise en forme commune est en bas. */
+
+/* =====================================================================
+   1. Thèmes (palettes)
+   ===================================================================== */
+
+/* ---- Années 20 : Art Déco noir et or ---- */
+.application.coc7.sheet.investigator.c7ft-annees20 {
+  --ft-bg:
+    repeating-linear-gradient(45deg, rgba(201, 162, 74, 0.035) 0 2px, transparent 2px 14px),
+    repeating-linear-gradient(-45deg, rgba(201, 162, 74, 0.035) 0 2px, transparent 2px 14px),
+    linear-gradient(180deg, #211a11 0%, #15110c 100%);
+  --ft-panel: rgba(15, 12, 8, 0.72);
+  --ft-line: #7d6128;
+  --ft-ink: #efe3c6;
+  --ft-dim: #b9a984;
+  --ft-accent: #c9a24a;
+  --ft-accent-strong: #ecd08a;
+  --ft-header-bg: linear-gradient(180deg, #0f0c08, #1d160d);
+  --ft-header-ink: #ecd08a;
+  --ft-header-rule: #c9a24a;
+  --ft-font-title: "C7FT Limelight", "Limelight", Georgia, serif;
+  --ft-font-label: "C7FT Poiret One", "Poiret One", Futura, sans-serif;
+  --ft-font-body: "C7FT Special Elite", "Special Elite", "Courier New", monospace;
+  --ft-font-value: "C7FT Limelight", "Limelight", Georgia, serif;
+  --ft-value-size: 1.3rem;
+  --ft-label-weight: 700;
+  --ft-title-spacing: 0.12em;
+  --ft-radius: 2px;
+  --ft-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  --ft-hover: rgba(201, 162, 74, 0.10);
+  --ft-hp: #9e2a2a; --ft-mp: #2d4a7a; --ft-luck: #a8832f; --ft-san: #3c6b4a;
+  --ft-tab-ink: #fff3d6;
+  --ft-photo-border: #15110c;
+  --ft-photo-ring: 0 0 0 1px #c9a24a, 0 0 0 4px #15110c, 0 0 0 5px #7d6128;
+  --ft-photo-rotate: 0deg;
+  --ft-photo-filter: sepia(0.25) contrast(1.05);
+  --ft-band: url("../assets/band-annees20.svg");
+  --ft-foot: url("../assets/foot-annees20.svg");
+  --ft-rule: linear-gradient(90deg, transparent, #c9a24a, transparent);
+  --ft-scheme: dark;
+}
+
+/* ---- New York années 20 : Manhattan, chrome et néons de Broadway ---- */
+.application.coc7.sheet.investigator.c7ft-newyork {
+  --ft-bg:
+    radial-gradient(ellipse at 50% 0%, rgba(120, 150, 200, 0.18), transparent 60%),
+    repeating-linear-gradient(90deg, rgba(200, 210, 223, 0.035) 0 1px, transparent 1px 22px),
+    linear-gradient(180deg, #121c2e 0%, #0b1220 100%);
+  --ft-panel: rgba(7, 12, 22, 0.62);
+  --ft-line: #5d6b80;
+  --ft-ink: #e9edf3;
+  --ft-dim: #9aa8bb;
+  --ft-accent: #f6c560;
+  --ft-accent-strong: #ffe4a3;
+  --ft-header-bg: linear-gradient(180deg, #070c16, #172338);
+  --ft-header-ink: #f2f5f9;
+  --ft-header-rule: #c8d2df;
+  --ft-font-title: "C7FT Poiret One", "Poiret One", Futura, sans-serif;
+  --ft-font-label: "C7FT Poiret One", "Poiret One", Futura, sans-serif;
+  --ft-font-body: "C7FT Poiret One", "Poiret One", Futura, sans-serif;
+  --ft-font-value: "C7FT Limelight", "Limelight", Georgia, serif;
+  --ft-value-size: 1.3rem;
+  --ft-label-weight: 700;
+  --ft-title-spacing: 0.16em;
+  --ft-radius: 3px;
+  --ft-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  --ft-hover: rgba(246, 197, 96, 0.10);
+  --ft-hp: #b4233f; --ft-mp: #3b5d9a; --ft-luck: #c7962a; --ft-san: #2f7a6e;
+  --ft-tab-ink: #ffffff;
+  --ft-photo-border: #0b1220;
+  --ft-photo-ring: 0 0 0 1px #c8d2df, 0 0 0 4px #0b1220, 0 0 0 5px #f6c560;
+  --ft-photo-rotate: 0deg;
+  --ft-photo-filter: grayscale(0.15);
+  --ft-band: url("../assets/band-newyork.svg");
+  --ft-foot: url("../assets/foot-newyork.svg");
+  --ft-rule: linear-gradient(90deg, transparent, #c8d2df, transparent);
+  --ft-scheme: dark;
+}
+
+/* ---- Par-delà les Montagnes Hallucinées : carnet d'expédition 1933 ---- */
+.application.coc7.sheet.investigator.c7ft-montagnes {
+  --ft-bg:
+    linear-gradient(180deg, rgba(186, 214, 232, 0.55) 0%, rgba(255, 255, 255, 0) 22%),
+    repeating-linear-gradient(0deg, transparent 0 21px, rgba(60, 100, 140, 0.10) 21px 22px),
+    linear-gradient(180deg, #f4f6f2 0%, #e7e9e1 100%);
+  --ft-panel: rgba(248, 250, 247, 0.78);
+  --ft-line: #9fb9cc;
+  --ft-ink: #1d2b3a;
+  --ft-dim: #4f6274;
+  --ft-accent: #3f6a8e;
+  --ft-accent-strong: #a3222a;
+  --ft-header-bg: linear-gradient(180deg, #23415e, #142a40);
+  --ft-header-ink: #ffffff;
+  --ft-header-rule: #a3222a;
+  --ft-font-title: "C7FT IM Fell SC", "IM Fell English SC", Georgia, serif;
+  --ft-font-label: "C7FT IM Fell", "IM Fell English", Georgia, serif;
+  --ft-font-body: "C7FT Special Elite", "Special Elite", "Courier New", monospace;
+  --ft-font-value: "C7FT Special Elite", "Special Elite", "Courier New", monospace;
+  --ft-label-weight: 400;
+  --ft-title-spacing: 0.08em;
+  --ft-radius: 3px;
+  --ft-shadow: 0 4px 14px rgba(20, 45, 70, 0.30);
+  --ft-hover: rgba(63, 106, 142, 0.10);
+  --ft-hp: #a3222a; --ft-mp: #23415e; --ft-luck: #8a6a1f; --ft-san: #3d6b55;
+  --ft-tab-ink: #ffffff;
+  --ft-photo-border: #fbfbf7;
+  --ft-photo-ring: 0 0 0 1px #9fb9cc;
+  --ft-photo-rotate: -1.5deg;
+  --ft-photo-filter: sepia(0.35) contrast(1.05);
+  --ft-band: url("../assets/band-montagnes.svg");
+  --ft-foot: url("../assets/foot-montagnes.svg");
+  --ft-rule: linear-gradient(90deg, transparent, #3f6a8e, transparent);
+  --ft-scheme: light;
+}
+
+/* ---- New York 2026 : verre fumé, LED et métro ---- */
+.application.coc7.sheet.investigator.c7ft-ny2026 {
+  --ft-bg:
+    radial-gradient(ellipse at 100% 0%, rgba(0, 57, 166, 0.18), transparent 55%),
+    linear-gradient(160deg, #22262e 0%, #0e1014 100%);
+  --ft-panel: rgba(255, 255, 255, 0.04);
+  --ft-line: #3a3f48;
+  --ft-ink: #f2f3f5;
+  --ft-dim: #9aa0aa;
+  --ft-accent: #fccc0a;
+  --ft-accent-strong: #ffffff;
+  --ft-header-bg: #0c0d10;
+  --ft-header-ink: #ffffff;
+  --ft-header-rule: #fccc0a;
+  --ft-font-title: "C7FT Inter", "Helvetica Neue", Arial, sans-serif;
+  --ft-font-label: "C7FT Inter", "Helvetica Neue", Arial, sans-serif;
+  --ft-font-body: "C7FT Inter", "Helvetica Neue", Arial, sans-serif;
+  --ft-font-value: "C7FT Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --ft-label-weight: 700;
+  --ft-title-spacing: 0.04em;
+  --ft-radius: 8px;
+  --ft-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --ft-hover: rgba(255, 255, 255, 0.06);
+  --ft-hp: #ee352e; --ft-mp: #0039a6; --ft-luck: #c79e00; --ft-san: #00933c;
+  --ft-tab-ink: #ffffff;
+  --ft-photo-border: #1b1e24;
+  --ft-photo-ring: 0 0 0 2px #fccc0a;
+  --ft-photo-rotate: 0deg;
+  --ft-photo-filter: none;
+  --ft-band: url("../assets/band-ny2026.svg");
+  --ft-foot: url("../assets/foot-ny2026.svg");
+  --ft-rule: linear-gradient(90deg, #fccc0a 0 24px, #3a3f48 24px);
+  --ft-scheme: dark;
+}
+
+/* ---- Antarctique 2026 : tablette de station polaire ---- */
+.application.coc7.sheet.investigator.c7ft-antarctique2026 {
+  --ft-bg:
+    linear-gradient(rgba(120, 160, 190, 0.10) 1px, transparent 1px) 0 0 / 16px 16px,
+    linear-gradient(90deg, rgba(120, 160, 190, 0.10) 1px, transparent 1px) 0 0 / 16px 16px,
+    linear-gradient(180deg, #f7fafc 0%, #e9f0f5 100%);
+  --ft-panel: rgba(255, 255, 255, 0.72);
+  --ft-line: #c9d7e2;
+  --ft-ink: #13202c;
+  --ft-dim: #5b6f80;
+  --ft-accent: #ff6a13;
+  --ft-accent-strong: #1f7fbf;
+  --ft-header-bg: #13202c;
+  --ft-header-ink: #ffffff;
+  --ft-header-rule: #ff6a13;
+  --ft-font-title: "C7FT Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --ft-font-label: "C7FT Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --ft-font-body: "C7FT Inter", "Helvetica Neue", Arial, sans-serif;
+  --ft-font-value: "C7FT Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --ft-label-weight: 700;
+  --ft-title-spacing: 0.12em;
+  --ft-radius: 8px;
+  --ft-shadow: 0 6px 18px rgba(20, 50, 80, 0.16);
+  --ft-hover: rgba(31, 127, 191, 0.08);
+  --ft-hp: #d8480f; --ft-mp: #1f7fbf; --ft-luck: #b98a00; --ft-san: #1d8a6b;
+  --ft-tab-ink: #ffffff;
+  --ft-photo-border: #ffffff;
+  --ft-photo-ring: 0 0 0 1px #c9d7e2;
+  --ft-photo-rotate: 0deg;
+  --ft-photo-filter: none;
+  --ft-band: url("../assets/band-antarctique2026.svg");
+  --ft-foot: url("../assets/foot-antarctique2026.svg");
+  --ft-rule: linear-gradient(90deg, #ff6a13 0 64px, #c9d7e2 64px);
+  --ft-scheme: light;
+}
+
+/* =====================================================================
+   2. Branchement sur les variables de la fiche CoC7
+   ===================================================================== */
+.application.coc7.sheet.investigator.c7ft {
+  color-scheme: var(--ft-scheme);
+  --color-labels-base: var(--ft-accent);
+  --color-labels: var(--ft-dim);
+  --color-hp-base: var(--ft-hp);
+  --color-mp-base: var(--ft-mp);
+  --color-luck-base: var(--ft-luck);
+  --color-sanity-base: var(--ft-san);
+  --color-hp: var(--ft-hp);
+  --color-mp: var(--ft-mp);
+  --color-luck: var(--ft-luck);
+  --color-sanity: var(--ft-san);
+  --color-green: var(--ft-san);
+  --color-red: var(--ft-hp);
+  --color-text: var(--ft-ink);
+  --color-highlight: var(--ft-accent);
+  --color-interact: var(--ft-accent);
+  --color-active: #ffffff;
+  --color-tint: var(--ft-panel);
+  --color-tint-light: var(--ft-panel);
+  --color-sheet-front: var(--ft-ink);
+  --color-window-decoration: transparent;
+  --color-table-row: var(--ft-hover);
+  --investigator-sheet-primary-font: var(--ft-font-label);
+  --investigator-sheet-secondary-font: var(--ft-font-body);
+  --investigator-sheet-ornament-top: var(--ft-band);
+  --investigator-sheet-ornament-green: var(--ft-foot);
+  --investigator-sheet-line-green: var(--ft-rule);
+  --investigator-sheet-line-red: var(--ft-rule);
+  --investigator-sheet-tentacles: none;
+  --investigator-sheet-photo-frame-small: none;
+  --investigator-sheet-tab-red: none;
+  --investigator-sheet-tab-green: none;
+  --investigator-sheet-tab-blue: none;
+  --investigator-sheet-tab-yellow: none;
+  --investigator-sheet-points-color: var(--ft-ink);
+  --button-text-color: var(--ft-ink);
+  --button-border-color: var(--ft-line);
+  --button-background-color: var(--ft-panel);
+  --input-text-color: var(--ft-ink);
+  --input-background-color: transparent;
+
+  color: var(--ft-ink);
+  border: 1px solid var(--ft-line);
+  border-radius: calc(var(--ft-radius) + 2px);
+  box-shadow: var(--ft-shadow);
+}
+
+/* =====================================================================
+   3. Mise en forme commune
+   ===================================================================== */
+
+/* Barre de titre */
+.application.coc7.sheet.investigator.c7ft header.window-header {
+  background: var(--ft-header-bg);
+  color: var(--ft-header-ink);
+  border-bottom: 3px solid var(--ft-header-rule);
+  font-family: var(--ft-font-title);
+  letter-spacing: var(--ft-title-spacing);
+  text-transform: uppercase;
+}
+.application.coc7.sheet.investigator.c7ft header.window-header button,
+.application.coc7.sheet.investigator.c7ft header.window-header .header-control { color: var(--ft-header-ink); }
+
+/* Fond */
+.application.coc7.sheet.investigator.c7ft section.window-content {
+  background: var(--ft-bg);
+  color: var(--ft-ink);
+  font-family: var(--ft-font-body);
+}
+
+/* Bandeau du haut */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator {
+  background-image: var(--ft-band);
+  background-repeat: no-repeat;
+  background-position: right 84px top 6px;
+  background-size: auto 30px;
+}
+
+/* Panneau principal + pied */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main {
+  --top-decoration-h: 4px;
+  --bottom-decoration-h: 50px;
+  background-color: var(--ft-panel);
+  border: 1px solid var(--ft-line);
+  border-radius: var(--ft-radius);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main:before {
+  background-image: var(--ft-rule);
+  background-size: 100% 4px;
+  height: 4px;
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main:after {
+  background-image: var(--ft-foot);
+  background-repeat: no-repeat;
+  background-position: right 12px bottom 2px;
+  background-size: auto 46px;
+  opacity: 0.9;
+}
+
+/* Onglets latéraux : languettes plates aux couleurs du thème */
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab { filter: none; opacity: 0.75; }
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab:after { content: none; }
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab:before {
+  content: "";
+  background: var(--tab-color);
+  border-radius: var(--ft-radius) 0 0 var(--ft-radius);
+  box-shadow: inset -3px 0 0 rgba(0, 0, 0, 0.18);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active,
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab:hover { opacity: 1; }
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active:before {
+  box-shadow: inset 4px 0 0 var(--ft-accent);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab span,
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab i,
+body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab label {
+  color: var(--ft-tab-ink);
+  font-family: var(--ft-font-title);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: var(--ft-title-spacing);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active span { color: #ffffff; }
+
+/* Portrait */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame { background: none; }
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame .photo {
+  rotate: var(--ft-photo-rotate);
+  filter: var(--ft-photo-filter);
+  background-color: var(--ft-panel);
+  border: 5px solid var(--ft-photo-border);
+  border-bottom-width: 18px;
+  border-radius: var(--ft-radius);
+  box-shadow: var(--ft-photo-ring), var(--ft-shadow);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame .conditions .icon { rotate: var(--ft-photo-rotate); }
+
+/* Panneau de gauche */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail {
+  border-bottom: 1px solid var(--ft-line);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail .title {
+  font-family: var(--ft-font-label);
+  font-weight: var(--ft-label-weight);
+  color: var(--ft-dim);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail .detail-value {
+  color: var(--ft-ink);
+  font-family: var(--ft-font-body);
+  font-size: 1.05rem;
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes,
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes,
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute {
+  background: var(--ft-panel);
+  border: 1px solid var(--ft-line);
+  border-radius: var(--ft-radius);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes:before,
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes:after,
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes:before,
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes:after {
+  background-image: var(--ft-rule);
+  background-size: 100% 2px;
+  height: 2px;
+}
+.application.coc7.sheet.investigator.c7ft .characteristic-name,
+.application.coc7.sheet.investigator.c7ft .attribute-name,
+.application.coc7.sheet.investigator.c7ft .derived-attribute-name {
+  font-family: var(--ft-font-label);
+  font-weight: var(--ft-label-weight);
+  letter-spacing: 0.06em;
+}
+.application.coc7.sheet.investigator.c7ft .characteristic-name,
+.application.coc7.sheet.investigator.c7ft .derived-attribute-name { color: var(--ft-dim); }
+.application.coc7.sheet.investigator.c7ft .characteristic-score,
+.application.coc7.sheet.investigator.c7ft .attribute-value,
+.application.coc7.sheet.investigator.c7ft .derived-attribute-value,
+.application.coc7.sheet.investigator.c7ft .skill-value,
+.application.coc7.sheet.investigator.c7ft .item-score {
+  font-family: var(--ft-font-value);
+  color: var(--ft-ink);
+}
+.application.coc7.sheet.investigator.c7ft .part-detail-value,
+.application.coc7.sheet.investigator.c7ft .skill-calc { color: var(--ft-dim); }
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute .attribute-total {
+  background-image: none;
+  padding-bottom: 0.25rem;
+  font-family: var(--ft-font-value);
+  color: #ffffff;
+}
+
+/* Titres et listes */
+.application.coc7.sheet.investigator.c7ft .tab-heading,
+.application.coc7.sheet.investigator.c7ft .section-heading {
+  font-family: var(--ft-font-title);
+  letter-spacing: 0.04em;
+  color: var(--ft-ink);
+}
+.application.coc7.sheet.investigator.c7ft .section-heading {
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 1.15rem;
+  line-height: 1.15;
+}
+.application.coc7.sheet.investigator.c7ft .tab-heading { white-space: nowrap; }
+.application.coc7.sheet.investigator.c7ft .tab-header { border-bottom: 1px solid var(--ft-line); }
+.application.coc7.sheet.investigator.c7ft .tab-header .tab-heading::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin: 3px auto 0;
+  background: var(--ft-rule);
+}
+.application.coc7.sheet.investigator.c7ft ul.item-list li.item { border-bottom: 1px solid var(--ft-line); }
+.application.coc7.sheet.investigator.c7ft ul.item-list li.item:hover { background: var(--ft-hover); }
+.application.coc7.sheet.investigator.c7ft ul.item-list li.specialization-header {
+  font-family: var(--ft-font-label);
+  font-weight: var(--ft-label-weight);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ft-dim);
+  border-left: 3px solid var(--ft-accent);
+  padding-left: 6px;
+}
+.application.coc7.sheet.investigator.c7ft .rollable:hover,
+.application.coc7.sheet.investigator.c7ft .item-control:hover,
+.application.coc7.sheet.investigator.c7ft a:hover {
+  color: var(--ft-accent);
+  text-shadow: none;
+}
+
+/* Champs et boutons */
+.application.coc7.sheet.investigator.c7ft input[type="text"],
+.application.coc7.sheet.investigator.c7ft input[type="number"],
+.application.coc7.sheet.investigator.c7ft select,
+.application.coc7.sheet.investigator.c7ft textarea { color: var(--ft-ink); }
+.application.coc7.sheet.investigator.c7ft input:focus,
+.application.coc7.sheet.investigator.c7ft select:focus,
+.application.coc7.sheet.investigator.c7ft textarea:focus {
+  outline: 2px solid var(--ft-accent);
+  outline-offset: -1px;
+  box-shadow: none;
+}
+.application.coc7.sheet.investigator.c7ft select option { color: #1c140d; background: #ffffff; }
+.application.coc7.sheet.investigator.c7ft section.window-content .button:not(.icon),
+.application.coc7.sheet.investigator.c7ft section.window-content button:not(.icon):not([class*="fa-"]) {
+  font-family: var(--ft-font-label);
+  border-radius: var(--ft-radius);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main .sheet-body .tab.development .header-section {
+  border: none;
+  border-radius: var(--ft-radius);
+  font-family: var(--ft-font-label);
+}
+
+/* Texte riche (historique) */
+.application.coc7.sheet.investigator.c7ft .editor-content,
+.application.coc7.sheet.investigator.c7ft prose-mirror { color: var(--ft-ink); font-family: var(--ft-font-body); }
+
+/* Libellés PV / PM / Chance / SAN : toujours lisibles, la couleur est portée par le cadran du bas */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute .attribute-name {
+  color: var(--ft-ink);
+}
+
+/* New York années 20 : Poiret One est très fine, on l'épaissit légèrement pour la lecture en stream */
+.application.coc7.sheet.investigator.c7ft-newyork section.window-content {
+  -webkit-text-stroke: 0.35px currentColor;
+  font-size: 1.02em;
+}
+.application.coc7.sheet.investigator.c7ft-newyork section.window-content input {
+  -webkit-text-stroke: 0;
+}
+
+/* Chiffres des caractéristiques : jamais coupés, quel que soit le thème.
+   La case du score principal prend toute la place disponible ; la police
+   des chiffres est réduite pour les thèmes à police large (Limelight). */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values {
+  grid-template-columns: 1fr;
+  grid-template-areas: "mainScore";
+  position: relative;
+  margin: 0 4px 5px;
+  padding: 0 2px;
+}
+/* Valeurs Difficile / Extrême : petites, dans le coin, sans voler de place au chiffre */
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value {
+  position: absolute;
+  right: 1px;
+  font-size: 0.68rem;
+  line-height: 1;
+  font-family: var(--ft-font-body);
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value.half-score { top: 1px; }
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value.fifth-score { bottom: 1px; }
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .detail-value {
+  width: 100%;
+  min-width: 2.6ch;
+  height: auto;
+  padding: 0;
+  border: none;
+  justify-self: stretch;
+  text-align: center;
+  font-size: var(--ft-value-size, 1.45rem);
+  letter-spacing: 0;
+  text-overflow: clip;
+  overflow: visible;
+  -webkit-text-stroke: 0;
+}
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute input {
+  letter-spacing: 0;
+  -webkit-text-stroke: 0;
+}
+
+/* En-tête de fenêtre : icônes toujours visibles */
+.application.coc7.sheet.investigator.c7ft header.window-header .header-control {
+  color: var(--ft-header-ink);
+  letter-spacing: 0;
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="36" viewBox="0 0 640 36">
+<rect x="0" y="16" width="640" height="1" fill="#7d6128"/><rect x="0" y="19" width="640" height="1" fill="#7d6128"/>
+<rect x="150" y="6" width="340" height="24" fill="#15110c" stroke="#c9a24a"/><rect x="153" y="9" width="334" height="18" fill="none" stroke="#7d6128"/>
+<text x="320" y="23" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" letter-spacing="3.5" fill="#ecd08a">◆ DOSSIER D'INVESTIGATEUR ◆</text>
+<polygon points="140,18 150,12 150,24" fill="#c9a24a"/><polygon points="500,18 490,12 490,24" fill="#c9a24a"/>
+</svg>

@@ -1,0 +1,12 @@
+/* Polices — licences dans fonts/LICENSE-*.txt
+   Limelight, Poiret One, IM Fell, Inter, Rajdhani : SIL OFL 1.1 ; Special Elite : Apache 2.0 */
+@font-face { font-family: "C7FT Limelight"; src: url("../fonts/Limelight.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "C7FT Poiret One"; src: url("../fonts/PoiretOne.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "C7FT Special Elite"; src: url("../fonts/SpecialElite.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "C7FT IM Fell SC"; src: url("../fonts/IMFellEnglishSC.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "C7FT IM Fell"; src: url("../fonts/IMFellEnglish.woff2") format("woff2"); font-style: normal; font-display: swap; }
+@font-face { font-family: "C7FT IM Fell"; src: url("../fonts/IMFellEnglish-Italic.woff2") format("woff2"); font-style: italic; font-display: swap; }
+@font-face { font-family: "C7FT Inter"; src: url("../fonts/Inter-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "C7FT Inter"; src: url("../fonts/Inter-SemiBold.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+@font-face { font-family: "C7FT Rajdhani"; src: url("../fonts/Rajdhani-SemiBold.woff2") format("woff2"); font-weight: 400 600; font-display: swap; }
+@font-face { font-family: "C7FT Rajdhani"; src: url("../fonts/Rajdhani-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
