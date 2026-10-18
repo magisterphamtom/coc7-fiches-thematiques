@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/banner.png" alt="coc7-fiches-thematiques" width="100%"></p>
+
 # CoC7 – Fiches investigateur thématiques
 
 Habille la fiche investigateur de **L'Appel de Cthulhu 7e** (système CoC7, fiche V3 par défaut) sur Foundry VTT v13/v14, avec la même famille de thèmes que *Cartes de chat thématiques* et *Token Action HUD – Thèmes L'Appel de Cthulhu* :
