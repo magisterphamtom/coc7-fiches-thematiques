@@ -24,6 +24,14 @@ Menu de la fenêtre (⋮) → **Thème de la fiche…** : automatique, aucun, co
 
 Seul l'affichage change : aucune donnée n'est modifiée, désactiver le module rend les fiches d'origine.
 
+## Aperçus
+
+<p align="center"><img src=".github/previews/apercu-fiches-thematiques.png" alt="Fiches thématiques" width="85%"></p>
+
+<p align="center"><img src=".github/previews/apercu-newyork-corrige.png" alt="Fiche New York" width="85%"></p>
+
+<p align="center"><img src=".github/previews/apercu-caracteristiques.png" alt="Caractéristiques" width="85%"></p>
+
 ## Installation
 Lien de manifeste : `https://github.com/magisterphamtom/coc7-fiches-thematiques/releases/latest/download/module.json`
 
