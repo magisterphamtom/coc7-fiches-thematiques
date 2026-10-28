@@ -319,7 +319,9 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
 .application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active span { color: #ffffff; }
 
 /* Portrait */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame { background: none; }
+.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame {
+  background: none; width: auto; height: auto; left: 0; padding: 14px 12px 0; display: flex; justify-content: center;
+}
 .application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame .photo {
   rotate: var(--ft-photo-rotate);
   filter: var(--ft-photo-filter);
@@ -328,6 +330,12 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   border-bottom-width: 18px;
   border-radius: var(--ft-radius);
   box-shadow: var(--ft-photo-ring), var(--ft-shadow);
+  /* portrait agrandi : il occupe la largeur du panneau, recadré sur le haut (le visage) */
+  width: min(100%, calc(250px * var(--portrait-scale, 1)));
+  height: calc(300px * var(--portrait-scale, 1));
+  margin: 0 0 14px;
+  object-fit: cover !important;
+  object-position: center 20%;
 }
 .application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame .conditions .icon { rotate: var(--ft-photo-rotate); }
 
@@ -539,8 +547,8 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
 
 /* Rappel sur la photo */
 .application.coc7.sheet.investigator.c7ft .c7ft-etats-actifs {
-  position: absolute; z-index: 3; left: calc(22px * var(--portrait-scale, 1)); width: calc(160px * var(--portrait-scale, 1));
-  bottom: calc(52px * var(--portrait-scale, 1)); display: flex; flex-direction: column; gap: 4px; rotate: var(--ft-photo-rotate);
+  position: absolute; z-index: 3; left: 50%; translate: -50% 0; width: min(78%, calc(200px * var(--portrait-scale, 1)));
+  bottom: 38px; display: flex; flex-direction: column; gap: 4px; rotate: var(--ft-photo-rotate);
 }
 .application.coc7.sheet.investigator.c7ft .c7ft-etat-actif {
   display: flex; align-items: center; justify-content: center; gap: 6px; padding: 3px 6px; cursor: pointer; white-space: nowrap;
