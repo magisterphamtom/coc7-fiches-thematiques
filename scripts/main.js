@@ -84,7 +84,7 @@ function themeFor(actor) {
   if (!actor || actor.type !== "character") return null;
   const own = actor.getFlag(ID, "theme"); // undefined = automatique
   if (own) return resolve(own);
-  const era = actor.flags?.["coc7-suivi-groupe"]?.era ?? actor.flags?.[LUCK_TRACKER]?.era;
+  const era = actor.flags?.[LUCK_TRACKER]?.era; // aussi écrit par le Suivi du groupe
   const key = era === "modern" ? "themeModern" : "theme1933";
   return resolve(game.settings.get(ID, key));
 }
