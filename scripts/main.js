@@ -30,6 +30,15 @@ function eraChoices() {
 }
 
 Hooks.once("init", () => {
+  game.settings.register(ID, "etats", {
+    name: "Barre des états préjudiciables",
+    hint: "Sur les fiches habillées : les états (à terre, inconscient, blessure grave, mourant, folies) en étiquettes sous le portrait, et ceux en cours affichés en gros sur la photo, dans le style du thème.",
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+    onChange: () => refreshOpenSheets()
+  });
   game.settings.register(ID, "theme1933", {
     name: "Thème des fiches 1933 (et sans époque)",
     hint:
@@ -75,7 +84,7 @@ function themeFor(actor) {
   if (!actor || actor.type !== "character") return null;
   const own = actor.getFlag(ID, "theme"); // undefined = automatique
   if (own) return resolve(own);
-  const era = actor.flags?.[LUCK_TRACKER]?.era;
+  const era = actor.flags?.["coc7-suivi-groupe"]?.era ?? actor.flags?.[LUCK_TRACKER]?.era;
   const key = era === "modern" ? "themeModern" : "theme1933";
   return resolve(game.settings.get(ID, key));
 }
@@ -86,6 +95,59 @@ function applyTheme(app) {
   const theme = themeFor(app.document);
   for (const t of THEME_KEYS) el.classList.toggle(`c7ft-${t}`, t === theme);
   el.classList.toggle("c7ft", !!theme);
+  if (theme && game.settings.get(ID, "etats")) barreEtats(app); else el.querySelectorAll(".c7ft-etats, .c7ft-etats-actifs").forEach((n) => n.remove());
+}
+
+/* ---------- États préjudiciables : barre d'étiquettes + rappel sur le portrait ---------- */
+
+const ETATS = [
+  { k: "prone", label: "À terre", icon: "game-icon game-icon-falling" },
+  { k: "unconscious", label: "Inconscient", icon: "game-icon game-icon-knocked-out-stars" },
+  { k: "criticalWounds", label: "Blessure grave", icon: "game-icon game-icon-arm-sling" },
+  { k: "dying", label: "Mourant", icon: "game-icon game-icon-heart-beats" },
+  { k: "tempoInsane", label: "Folie temporaire", icon: "game-icon game-icon-hanging-spider" },
+  { k: "indefInsane", label: "Folie persistante", icon: "game-icon game-icon-tentacles-skull" }
+];
+
+/**
+ * Ajoute sous le portrait une rangée d'étiquettes (une par état) et, sur le portrait,
+ * un rappel en gros des états actifs. Un clic passe par l'icône d'origine de CoC7 :
+ * c'est le système qui change l'état, comme avant.
+ */
+function barreEtats(app) {
+  const el = app.element;
+  const cadre = el.querySelector("div.investigator .photo-frame");
+  const origine = cadre?.querySelector(".conditions");
+  if (!cadre || !origine) return;
+  el.querySelectorAll(".c7ft-etats, .c7ft-etats-actifs").forEach((n) => n.remove());
+  const c = app.document.system.conditions ?? {};
+  const actif = (k) => !!c[k]?.value;
+  const esc = (t) => foundry.utils.escapeHTML(String(t));
+  const clic = (k) => origine.querySelector(`[data-condition="${k}"]`);
+
+  const barre = document.createElement("section");
+  barre.className = "c7ft-etats";
+  barre.innerHTML = ETATS.map((e) => `<a class="c7ft-etat${actif(e.k) ? " actif" : ""}" data-c7ft-etat="${e.k}" data-tooltip="${actif(e.k) ? "Retirer" : "Ajouter"} : ${esc(e.label)}"><i class="${e.icon}"></i><span>${esc(e.label)}</span></a>`).join("")
+    + (actif("dead") ? `<a class="c7ft-etat actif c7ft-mort" data-c7ft-etat="dead" data-tooltip="Retirer : Mort"><i class="game-icon game-icon-tombstone"></i><span>Mort</span></a>`
+      : actif("dying") ? `<a class="c7ft-etat c7ft-survie" data-c7ft-survie="1" data-tooltip="Jet de CON pour rester en vie"><i class="game-icon game-icon-d10"></i><span>Jet de survie</span></a>` : "");
+  cadre.after(barre);
+
+  const actifs = [...ETATS, { k: "dead", label: "Mort", icon: "game-icon game-icon-tombstone" }].filter((e) => actif(e.k));
+  if (actifs.length) {
+    const rappel = document.createElement("div");
+    rappel.className = "c7ft-etats-actifs";
+    rappel.innerHTML = actifs.map((e) => `<a class="c7ft-etat-actif" data-c7ft-etat="${e.k}" data-tooltip="${esc(e.label)} (clic : retirer)"><i class="${e.icon}"></i> ${esc(e.label)}</a>`).join("");
+    cadre.append(rappel);
+  }
+
+  el.querySelectorAll("[data-c7ft-etat]").forEach((a) => a.addEventListener("click", (ev) => {
+    ev.preventDefault(); ev.stopPropagation();
+    clic(a.dataset.c7ftEtat)?.click();
+  }));
+  barre.querySelector("[data-c7ft-survie]")?.addEventListener("click", (ev) => {
+    ev.preventDefault(); ev.stopPropagation();
+    origine.querySelector(".dying-check")?.click();
+  });
 }
 
 function refreshOpenSheets(actor) {
@@ -109,7 +171,7 @@ Hooks.on("renderActorSheetV2", (app) => {
 Hooks.on("updateActor", (actor, changes) => {
   const f = changes?.flags;
   if (!f) return;
-  if (ID in f || LUCK_TRACKER in f || `-=${ID}` in f) refreshOpenSheets(actor);
+  if (ID in f || LUCK_TRACKER in f || "coc7-suivi-groupe" in f || `-=${ID}` in f) refreshOpenSheets(actor);
 });
 
 // Le thème du chat change (réglage client ou monde) : les fiches réglées sur « comme le chat » suivent.

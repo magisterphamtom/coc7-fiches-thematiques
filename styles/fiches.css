@@ -515,3 +515,62 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   color: var(--ft-header-ink);
   letter-spacing: 0;
 }
+
+/* =====================================================================
+   États préjudiciables : barre d'étiquettes sous le portrait
+   et rappel en gros sur la photo (styles propres à chaque thème)
+   ===================================================================== */
+.application.coc7.sheet.investigator.c7ft .photo-frame:has(+ .c7ft-etats) .conditions { visibility: hidden; }
+.application.coc7.sheet.investigator.c7ft .c7ft-etats {
+  --et-ko: #a32424; --et-ko-ink: #fff;
+  position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px;
+  padding: 4px 6px 8px; margin: 0 0 2px;
+}
+.application.coc7.sheet.investigator.c7ft .c7ft-etat {
+  display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; white-space: nowrap; cursor: pointer;
+  font-family: var(--ft-font-label); font-weight: var(--ft-label-weight); font-size: 11.5px; line-height: 1.5;
+  color: var(--ft-dim); border: 1px dashed var(--ft-line); border-radius: var(--ft-radius);
+  opacity: .62; transition: opacity .1s, transform .1s;
+}
+.application.coc7.sheet.investigator.c7ft .c7ft-etat i { font-size: 15px; }
+.application.coc7.sheet.investigator.c7ft .c7ft-etat:hover { opacity: 1; transform: translateY(-1px); color: var(--ft-ink); text-shadow: none; }
+.application.coc7.sheet.investigator.c7ft .c7ft-etat.actif { opacity: 1; color: var(--et-ko-ink); background: var(--et-ko); border: 1px solid var(--et-ko); box-shadow: 0 2px 5px rgba(0, 0, 0, .35); }
+.application.coc7.sheet.investigator.c7ft .c7ft-etat.c7ft-survie { opacity: 1; color: var(--ft-accent-strong); border-style: solid; border-color: var(--ft-accent); }
+
+/* Rappel sur la photo */
+.application.coc7.sheet.investigator.c7ft .c7ft-etats-actifs {
+  position: absolute; z-index: 3; left: calc(22px * var(--portrait-scale, 1)); width: calc(160px * var(--portrait-scale, 1));
+  bottom: calc(52px * var(--portrait-scale, 1)); display: flex; flex-direction: column; gap: 4px; rotate: var(--ft-photo-rotate);
+}
+.application.coc7.sheet.investigator.c7ft .c7ft-etat-actif {
+  display: flex; align-items: center; justify-content: center; gap: 6px; padding: 3px 6px; cursor: pointer; white-space: nowrap;
+  background: rgba(150, 20, 20, .92); color: #fff; font-family: var(--ft-font-title); font-size: 14px; letter-spacing: .04em; text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, .75); box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+.application.coc7.sheet.investigator.c7ft .c7ft-etat-actif i { font-size: 16px; }
+.application.coc7.sheet.investigator.c7ft .c7ft-etat-actif:hover { filter: brightness(1.15); text-shadow: none; }
+
+/* Années 20 : plaques hexagonales dorées */
+.application.coc7.sheet.investigator.c7ft-annees20 .c7ft-etat { border: 1px solid #7d6128; clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%); padding: 2px 12px; border-radius: 0; }
+.application.coc7.sheet.investigator.c7ft-annees20 .c7ft-etat.actif { background: linear-gradient(180deg, #d9b45e, #a8832f); color: #15110c; border-color: #ecd08a; box-shadow: none; }
+.application.coc7.sheet.investigator.c7ft-annees20 .c7ft-etat-actif { background: rgba(21, 17, 12, .92); color: #ecd08a; border: 1px solid #c9a24a; box-shadow: 0 0 0 3px rgba(21, 17, 12, .92), 0 0 0 4px #7d6128; text-transform: uppercase; }
+
+/* New York années 20 : enseignes émaillées et néon */
+.application.coc7.sheet.investigator.c7ft-newyork .c7ft-etat { border: 1px solid #5d6b80; border-radius: 3px; background: rgba(7, 12, 22, .5); }
+.application.coc7.sheet.investigator.c7ft-newyork .c7ft-etat.actif { background: #1a0a12; color: #ff6b8b; border-color: #ff6b8b; box-shadow: 0 0 6px rgba(255, 80, 120, .75), inset 0 0 4px rgba(255, 80, 120, .5); text-shadow: 0 0 4px rgba(255, 90, 130, .9); }
+.application.coc7.sheet.investigator.c7ft-newyork .c7ft-etat-actif { background: rgba(10, 6, 14, .9); color: #ff8aa3; border: 2px solid #ff6b8b; box-shadow: 0 0 10px rgba(255, 80, 120, .8); text-shadow: 0 0 6px rgba(255, 90, 130, .9); }
+
+/* Montagnes Hallucinées : étiquettes de carnet à double filet, cachet de cire */
+.application.coc7.sheet.investigator.c7ft-montagnes .c7ft-etat { border: 3px double var(--ft-line); border-radius: 4px; }
+.application.coc7.sheet.investigator.c7ft-montagnes .c7ft-etat.actif { background: radial-gradient(circle at 35% 30%, #b3332e, #7a1414 70%); color: #f6e9c8; border: 3px double #e8d7a8; }
+.application.coc7.sheet.investigator.c7ft-montagnes .c7ft-etat-actif { background: radial-gradient(circle at 35% 30%, rgba(179, 51, 46, .95), rgba(122, 20, 20, .95) 70%); color: #f6e9c8; border: 3px double #e8d7a8; text-transform: none; font-family: var(--ft-font-label); font-weight: 700; }
+
+/* New York 2026 : puces arrondies */
+.application.coc7.sheet.investigator.c7ft-ny2026 .c7ft-etat { border: 1px solid var(--ft-line); border-radius: 999px; background: var(--ft-panel); }
+.application.coc7.sheet.investigator.c7ft-ny2026 .c7ft-etat.actif { background: #d32f2f; border-color: #d32f2f; }
+.application.coc7.sheet.investigator.c7ft-ny2026 .c7ft-etat-actif { border-radius: 8px; background: rgba(211, 47, 47, .94); border: none; text-transform: none; font-family: var(--ft-font-label); font-weight: 700; }
+
+/* Antarctique 2026 : affichage tête haute, verre fumé, alerte rouge */
+.application.coc7.sheet.investigator.c7ft-antarctique2026 .c7ft-etat { border: 1px solid var(--ft-line); border-radius: 0; background: rgba(255, 255, 255, .55); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); text-transform: uppercase; letter-spacing: .04em; }
+.application.coc7.sheet.investigator.c7ft-antarctique2026 .c7ft-etat.actif { background: rgba(200, 40, 40, .85); border-color: #ff8a80; color: #fff; box-shadow: none; }
+.application.coc7.sheet.investigator.c7ft-antarctique2026 .c7ft-etat-actif { background: rgba(120, 10, 10, .82); border: 1px solid #ff8a80; color: #ffd6d2; box-shadow: 0 0 10px rgba(255, 60, 60, .55); clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); letter-spacing: .02em; font-size: 13px; }

@@ -19,6 +19,10 @@ Habille la fiche investigateur de **L'Appel de Cthulhu 7e** (système CoC7, fich
 
 L'époque d'un investigateur est celle choisie dans *CoC7 – Suivi de Chance du groupe*. Sans ce module, toutes les fiches prennent le thème 1933.
 
+## États préjudiciables
+
+Sur une fiche habillée, les états (à terre, inconscient, blessure grave, mourant, folie temporaire, folie persistante) s'affichent en étiquettes sous le portrait, dans le style du thème : plaques dorées Art déco, néon de Broadway, cachets de cire du carnet d'expédition, puces modernes, alerte rouge d'Antarctique 2026. Ceux en cours s'affichent aussi en gros sur la photo. Un clic ajoute ou retire l'état, comme l'icône d'origine. Quand l'investigateur est mourant, une étiquette **Jet de survie** lance le jet de CON. Se désactive dans les réglages (« Barre des états préjudiciables »).
+
 ## Par fiche (Gardien)
 Menu de la fenêtre (⋮) → **Thème de la fiche…** : automatique, aucun, comme le chat, ou l'un des cinq thèmes.
 
