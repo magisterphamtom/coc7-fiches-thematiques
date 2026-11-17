@@ -9,7 +9,7 @@
    ===================================================================== */
 
 /* ---- Années 20 : Art Déco noir et or ---- */
-.application.coc7.sheet.investigator.c7ft-annees20 {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-annees20 {
   --ft-bg:
     repeating-linear-gradient(45deg, rgba(201, 162, 74, 0.035) 0 2px, transparent 2px 14px),
     repeating-linear-gradient(-45deg, rgba(201, 162, 74, 0.035) 0 2px, transparent 2px 14px),
@@ -46,7 +46,7 @@
 }
 
 /* ---- New York années 20 : Manhattan, chrome et néons de Broadway ---- */
-.application.coc7.sheet.investigator.c7ft-newyork {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-newyork {
   --ft-bg:
     radial-gradient(ellipse at 50% 0%, rgba(120, 150, 200, 0.18), transparent 60%),
     repeating-linear-gradient(90deg, rgba(200, 210, 223, 0.035) 0 1px, transparent 1px 22px),
@@ -83,7 +83,7 @@
 }
 
 /* ---- Par-delà les Montagnes Hallucinées : carnet d'expédition 1933 ---- */
-.application.coc7.sheet.investigator.c7ft-montagnes {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-montagnes {
   --ft-bg:
     linear-gradient(180deg, rgba(186, 214, 232, 0.55) 0%, rgba(255, 255, 255, 0) 22%),
     repeating-linear-gradient(0deg, transparent 0 21px, rgba(60, 100, 140, 0.10) 21px 22px),
@@ -119,7 +119,7 @@
 }
 
 /* ---- New York 2026 : verre fumé, LED et métro ---- */
-.application.coc7.sheet.investigator.c7ft-ny2026 {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-ny2026 {
   --ft-bg:
     radial-gradient(ellipse at 100% 0%, rgba(0, 57, 166, 0.18), transparent 55%),
     linear-gradient(160deg, #22262e 0%, #0e1014 100%);
@@ -154,7 +154,7 @@
 }
 
 /* ---- Antarctique 2026 : tablette de station polaire ---- */
-.application.coc7.sheet.investigator.c7ft-antarctique2026 {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-antarctique2026 {
   --ft-bg:
     linear-gradient(rgba(120, 160, 190, 0.10) 1px, transparent 1px) 0 0 / 16px 16px,
     linear-gradient(90deg, rgba(120, 160, 190, 0.10) 1px, transparent 1px) 0 0 / 16px 16px,
@@ -192,7 +192,7 @@
 /* =====================================================================
    2. Branchement sur les variables de la fiche CoC7
    ===================================================================== */
-.application.coc7.sheet.investigator.c7ft {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft {
   color-scheme: var(--ft-scheme);
   --color-labels-base: var(--ft-accent);
   --color-labels: var(--ft-dim);
@@ -245,7 +245,7 @@
    ===================================================================== */
 
 /* Barre de titre */
-.application.coc7.sheet.investigator.c7ft header.window-header {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft header.window-header {
   background: var(--ft-header-bg);
   color: var(--ft-header-ink);
   border-bottom: 3px solid var(--ft-header-rule);
@@ -253,18 +253,18 @@
   letter-spacing: var(--ft-title-spacing);
   text-transform: uppercase;
 }
-.application.coc7.sheet.investigator.c7ft header.window-header button,
-.application.coc7.sheet.investigator.c7ft header.window-header .header-control { color: var(--ft-header-ink); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft header.window-header button,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft header.window-header .header-control { color: var(--ft-header-ink); }
 
 /* Fond */
-.application.coc7.sheet.investigator.c7ft section.window-content {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content {
   background: var(--ft-bg);
   color: var(--ft-ink);
   font-family: var(--ft-font-body);
 }
 
 /* Bandeau du haut */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator {
   background-image: var(--ft-band);
   background-repeat: no-repeat;
   background-position: right 84px top 6px;
@@ -272,19 +272,19 @@
 }
 
 /* Panneau principal + pied */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .sheet-main {
   --top-decoration-h: 4px;
   --bottom-decoration-h: 50px;
   background-color: var(--ft-panel);
   border: 1px solid var(--ft-line);
   border-radius: var(--ft-radius);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main:before {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .sheet-main:before {
   background-image: var(--ft-rule);
   background-size: 100% 4px;
   height: 4px;
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main:after {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .sheet-main:after {
   background-image: var(--ft-foot);
   background-repeat: no-repeat;
   background-position: right 12px bottom 2px;
@@ -293,36 +293,28 @@
 }
 
 /* Onglets latéraux : languettes plates aux couleurs du thème */
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab { filter: none; opacity: 0.75; }
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab:after { content: none; }
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab:before {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab { filter: none; opacity: 0.75; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab:after { content: none; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab:before {
   content: "";
   background: var(--tab-color);
   border-radius: var(--ft-radius) 0 0 var(--ft-radius);
   box-shadow: inset -3px 0 0 rgba(0, 0, 0, 0.18);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active,
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab:hover { opacity: 1; }
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active:before {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab.active,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab:hover { opacity: 1; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab.active:before {
   box-shadow: inset 4px 0 0 var(--ft-accent);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab span,
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab i,
-body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab label {
-  color: var(--ft-tab-ink);
-  font-family: var(--ft-font-title);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: var(--ft-title-spacing);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-}
-.application.coc7.sheet.investigator.c7ft section.window-content nav.tabs .tab.active span { color: #ffffff; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab span,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab i,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content nav.tabs .tab.active span { color: #ffffff; }
 
 /* Portrait */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .photo-frame {
   background: none; width: auto; height: auto; left: 0; padding: 14px 12px 0; display: flex; justify-content: center;
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame .photo {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .photo-frame .photo {
   rotate: var(--ft-photo-rotate);
   filter: var(--ft-photo-filter);
   background-color: var(--ft-panel);
@@ -337,57 +329,57 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   object-fit: cover !important;
   object-position: center 20%;
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .photo-frame .conditions .icon { rotate: var(--ft-photo-rotate); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .photo-frame .conditions .icon { rotate: var(--ft-photo-rotate); }
 
 /* Panneau de gauche */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail {
   border-bottom: 1px solid var(--ft-line);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail .title {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail .title {
   font-family: var(--ft-font-label);
   font-weight: var(--ft-label-weight);
   color: var(--ft-dim);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail .detail-value {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .character-details .character-detail .detail-value {
   color: var(--ft-ink);
   font-family: var(--ft-font-body);
   font-size: 1.05rem;
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes,
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes,
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute {
   background: var(--ft-panel);
   border: 1px solid var(--ft-line);
   border-radius: var(--ft-radius);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes:before,
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes:after,
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes:before,
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes:after {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes:before,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes:after,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes:before,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .derived-attributes:after {
   background-image: var(--ft-rule);
   background-size: 100% 2px;
   height: 2px;
 }
-.application.coc7.sheet.investigator.c7ft .characteristic-name,
-.application.coc7.sheet.investigator.c7ft .attribute-name,
-.application.coc7.sheet.investigator.c7ft .derived-attribute-name {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .characteristic-name,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .attribute-name,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .derived-attribute-name {
   font-family: var(--ft-font-label);
   font-weight: var(--ft-label-weight);
   letter-spacing: 0.06em;
 }
-.application.coc7.sheet.investigator.c7ft .characteristic-name,
-.application.coc7.sheet.investigator.c7ft .derived-attribute-name { color: var(--ft-dim); }
-.application.coc7.sheet.investigator.c7ft .characteristic-score,
-.application.coc7.sheet.investigator.c7ft .attribute-value,
-.application.coc7.sheet.investigator.c7ft .derived-attribute-value,
-.application.coc7.sheet.investigator.c7ft .skill-value,
-.application.coc7.sheet.investigator.c7ft .item-score {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .characteristic-name,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .derived-attribute-name { color: var(--ft-dim); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .characteristic-score,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .attribute-value,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .derived-attribute-value,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .skill-value,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .item-score {
   font-family: var(--ft-font-value);
   color: var(--ft-ink);
 }
-.application.coc7.sheet.investigator.c7ft .part-detail-value,
-.application.coc7.sheet.investigator.c7ft .skill-calc { color: var(--ft-dim); }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute .attribute-total {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .part-detail-value,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .skill-calc { color: var(--ft-dim); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute .attribute-total {
   background-image: none;
   padding-bottom: 0.25rem;
   font-family: var(--ft-font-value);
@@ -395,13 +387,13 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
 }
 
 /* Titres et listes */
-.application.coc7.sheet.investigator.c7ft .tab-heading,
-.application.coc7.sheet.investigator.c7ft .section-heading {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .tab-heading,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .section-heading {
   font-family: var(--ft-font-title);
   letter-spacing: 0.04em;
   color: var(--ft-ink);
 }
-.application.coc7.sheet.investigator.c7ft .section-heading {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .section-heading {
   flex-shrink: 1;
   min-width: 0;
   white-space: normal;
@@ -409,9 +401,9 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   font-size: 1.15rem;
   line-height: 1.15;
 }
-.application.coc7.sheet.investigator.c7ft .tab-heading { white-space: nowrap; }
-.application.coc7.sheet.investigator.c7ft .tab-header { border-bottom: 1px solid var(--ft-line); }
-.application.coc7.sheet.investigator.c7ft .tab-header .tab-heading::after {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .tab-heading { white-space: nowrap; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .tab-header { border-bottom: 1px solid var(--ft-line); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .tab-header .tab-heading::after {
   content: "";
   display: block;
   width: 64px;
@@ -419,9 +411,9 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   margin: 3px auto 0;
   background: var(--ft-rule);
 }
-.application.coc7.sheet.investigator.c7ft ul.item-list li.item { border-bottom: 1px solid var(--ft-line); }
-.application.coc7.sheet.investigator.c7ft ul.item-list li.item:hover { background: var(--ft-hover); }
-.application.coc7.sheet.investigator.c7ft ul.item-list li.specialization-header {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft ul.item-list li.item { border-bottom: 1px solid var(--ft-line); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft ul.item-list li.item:hover { background: var(--ft-hover); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft ul.item-list li.specialization-header {
   font-family: var(--ft-font-label);
   font-weight: var(--ft-label-weight);
   letter-spacing: 0.08em;
@@ -430,59 +422,59 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   border-left: 3px solid var(--ft-accent);
   padding-left: 6px;
 }
-.application.coc7.sheet.investigator.c7ft .rollable:hover,
-.application.coc7.sheet.investigator.c7ft .item-control:hover,
-.application.coc7.sheet.investigator.c7ft a:hover {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .rollable:hover,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .item-control:hover,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft a:hover {
   color: var(--ft-accent);
   text-shadow: none;
 }
 
 /* Champs et boutons */
-.application.coc7.sheet.investigator.c7ft input[type="text"],
-.application.coc7.sheet.investigator.c7ft input[type="number"],
-.application.coc7.sheet.investigator.c7ft select,
-.application.coc7.sheet.investigator.c7ft textarea { color: var(--ft-ink); }
-.application.coc7.sheet.investigator.c7ft input:focus,
-.application.coc7.sheet.investigator.c7ft select:focus,
-.application.coc7.sheet.investigator.c7ft textarea:focus {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft input[type="text"],
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft input[type="number"],
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft select,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft textarea { color: var(--ft-ink); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft input:focus,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft select:focus,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft textarea:focus {
   outline: 2px solid var(--ft-accent);
   outline-offset: -1px;
   box-shadow: none;
 }
-.application.coc7.sheet.investigator.c7ft select option { color: #1c140d; background: #ffffff; }
-.application.coc7.sheet.investigator.c7ft section.window-content .button:not(.icon),
-.application.coc7.sheet.investigator.c7ft section.window-content button:not(.icon):not([class*="fa-"]) {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft select option { color: #1c140d; background: #ffffff; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content .button:not(.icon),
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content button:not(.icon):not([class*="fa-"]) {
   font-family: var(--ft-font-label);
   border-radius: var(--ft-radius);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator .sheet-main .sheet-body .tab.development .header-section {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator .sheet-main .sheet-body .tab.development .header-section {
   border: none;
   border-radius: var(--ft-radius);
   font-family: var(--ft-font-label);
 }
 
 /* Texte riche (historique) */
-.application.coc7.sheet.investigator.c7ft .editor-content,
-.application.coc7.sheet.investigator.c7ft prose-mirror { color: var(--ft-ink); font-family: var(--ft-font-body); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .editor-content,
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft prose-mirror { color: var(--ft-ink); font-family: var(--ft-font-body); }
 
 /* Libellés PV / PM / Chance / SAN : toujours lisibles, la couleur est portée par le cadran du bas */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute .attribute-name {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute .attribute-name {
   color: var(--ft-ink);
 }
 
 /* New York années 20 : Poiret One est très fine, on l'épaissit légèrement pour la lecture en stream */
-.application.coc7.sheet.investigator.c7ft-newyork section.window-content {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-newyork section.window-content {
   -webkit-text-stroke: 0.35px currentColor;
   font-size: 1.02em;
 }
-.application.coc7.sheet.investigator.c7ft-newyork section.window-content input {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-newyork section.window-content input {
   -webkit-text-stroke: 0;
 }
 
 /* Chiffres des caractéristiques : jamais coupés, quel que soit le thème.
    La case du score principal prend toute la place disponible ; la police
    des chiffres est réduite pour les thèmes à police large (Limelight). */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values {
   grid-template-columns: 1fr;
   grid-template-areas: "mainScore";
   position: relative;
@@ -490,16 +482,16 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   padding: 0 2px;
 }
 /* Valeurs Difficile / Extrême : petites, dans le coin, sans voler de place au chiffre */
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value {
   position: absolute;
   right: 1px;
   font-size: 0.68rem;
   line-height: 1;
   font-family: var(--ft-font-body);
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value.half-score { top: 1px; }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value.fifth-score { bottom: 1px; }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .detail-value {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value.half-score { top: 1px; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .part-detail-value.fifth-score { bottom: 1px; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .primary-attributes .characteristics .char-box .char-box-values .detail-value {
   width: 100%;
   min-width: 2.6ch;
   height: auto;
@@ -513,13 +505,13 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
   overflow: visible;
   -webkit-text-stroke: 0;
 }
-.application.coc7.sheet.investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute input {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft section.window-content div.investigator aside.personal-details .secondary-attributes .secondary-attribute input {
   letter-spacing: 0;
   -webkit-text-stroke: 0;
 }
 
 /* En-tête de fenêtre : icônes toujours visibles */
-.application.coc7.sheet.investigator.c7ft header.window-header .header-control {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft header.window-header .header-control {
   color: var(--ft-header-ink);
   letter-spacing: 0;
 }
@@ -528,57 +520,57 @@ body.running-v12 .application.coc7.sheet.investigator.c7ft section.window-conten
    États préjudiciables : barre d'étiquettes sous le portrait
    et rappel en gros sur la photo (styles propres à chaque thème)
    ===================================================================== */
-.application.coc7.sheet.investigator.c7ft .photo-frame:has(+ .c7ft-etats) .conditions { visibility: hidden; }
-.application.coc7.sheet.investigator.c7ft .c7ft-etats {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .photo-frame:has(+ .c7ft-etats) .conditions { visibility: hidden; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etats {
   --et-ko: #a32424; --et-ko-ink: #fff;
   position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px;
   padding: 4px 6px 8px; margin: 0 0 2px;
 }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat {
   display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; white-space: nowrap; cursor: pointer;
   font-family: var(--ft-font-label); font-weight: var(--ft-label-weight); font-size: 11.5px; line-height: 1.5;
   color: var(--ft-dim); border: 1px dashed var(--ft-line); border-radius: var(--ft-radius);
   opacity: .62; transition: opacity .1s, transform .1s;
 }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat i { font-size: 15px; }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat:hover { opacity: 1; transform: translateY(-1px); color: var(--ft-ink); text-shadow: none; }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat.actif { opacity: 1; color: var(--et-ko-ink); background: var(--et-ko); border: 1px solid var(--et-ko); box-shadow: 0 2px 5px rgba(0, 0, 0, .35); }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat.c7ft-survie { opacity: 1; color: var(--ft-accent-strong); border-style: solid; border-color: var(--ft-accent); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat i { font-size: 15px; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat:hover { opacity: 1; transform: translateY(-1px); color: var(--ft-ink); text-shadow: none; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat.actif { opacity: 1; color: var(--et-ko-ink); background: var(--et-ko); border: 1px solid var(--et-ko); box-shadow: 0 2px 5px rgba(0, 0, 0, .35); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat.c7ft-survie { opacity: 1; color: var(--ft-accent-strong); border-style: solid; border-color: var(--ft-accent); }
 
 /* Rappel sur la photo */
-.application.coc7.sheet.investigator.c7ft .c7ft-etats-actifs {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etats-actifs {
   position: absolute; z-index: 3; left: 50%; translate: -50% 0; width: min(78%, calc(200px * var(--portrait-scale, 1)));
   bottom: 38px; display: flex; flex-direction: column; gap: 4px; rotate: var(--ft-photo-rotate);
 }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat-actif {
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat-actif {
   display: flex; align-items: center; justify-content: center; gap: 6px; padding: 3px 6px; cursor: pointer; white-space: nowrap;
   background: rgba(150, 20, 20, .92); color: #fff; font-family: var(--ft-font-title); font-size: 14px; letter-spacing: .04em; text-transform: uppercase;
   border: 2px solid rgba(255, 255, 255, .75); box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
 }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat-actif i { font-size: 16px; }
-.application.coc7.sheet.investigator.c7ft .c7ft-etat-actif:hover { filter: brightness(1.15); text-shadow: none; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat-actif i { font-size: 16px; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft .c7ft-etat-actif:hover { filter: brightness(1.15); text-shadow: none; }
 
 /* Années 20 : plaques hexagonales dorées */
-.application.coc7.sheet.investigator.c7ft-annees20 .c7ft-etat { border: 1px solid #7d6128; clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%); padding: 2px 12px; border-radius: 0; }
-.application.coc7.sheet.investigator.c7ft-annees20 .c7ft-etat.actif { background: linear-gradient(180deg, #d9b45e, #a8832f); color: #15110c; border-color: #ecd08a; box-shadow: none; }
-.application.coc7.sheet.investigator.c7ft-annees20 .c7ft-etat-actif { background: rgba(21, 17, 12, .92); color: #ecd08a; border: 1px solid #c9a24a; box-shadow: 0 0 0 3px rgba(21, 17, 12, .92), 0 0 0 4px #7d6128; text-transform: uppercase; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-annees20 .c7ft-etat { border: 1px solid #7d6128; clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0 50%); padding: 2px 12px; border-radius: 0; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-annees20 .c7ft-etat.actif { background: linear-gradient(180deg, #d9b45e, #a8832f); color: #15110c; border-color: #ecd08a; box-shadow: none; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-annees20 .c7ft-etat-actif { background: rgba(21, 17, 12, .92); color: #ecd08a; border: 1px solid #c9a24a; box-shadow: 0 0 0 3px rgba(21, 17, 12, .92), 0 0 0 4px #7d6128; text-transform: uppercase; }
 
 /* New York années 20 : enseignes émaillées et néon */
-.application.coc7.sheet.investigator.c7ft-newyork .c7ft-etat { border: 1px solid #5d6b80; border-radius: 3px; background: rgba(7, 12, 22, .5); }
-.application.coc7.sheet.investigator.c7ft-newyork .c7ft-etat.actif { background: #1a0a12; color: #ff6b8b; border-color: #ff6b8b; box-shadow: 0 0 6px rgba(255, 80, 120, .75), inset 0 0 4px rgba(255, 80, 120, .5); text-shadow: 0 0 4px rgba(255, 90, 130, .9); }
-.application.coc7.sheet.investigator.c7ft-newyork .c7ft-etat-actif { background: rgba(10, 6, 14, .9); color: #ff8aa3; border: 2px solid #ff6b8b; box-shadow: 0 0 10px rgba(255, 80, 120, .8); text-shadow: 0 0 6px rgba(255, 90, 130, .9); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-newyork .c7ft-etat { border: 1px solid #5d6b80; border-radius: 3px; background: rgba(7, 12, 22, .5); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-newyork .c7ft-etat.actif { background: #1a0a12; color: #ff6b8b; border-color: #ff6b8b; box-shadow: 0 0 6px rgba(255, 80, 120, .75), inset 0 0 4px rgba(255, 80, 120, .5); text-shadow: 0 0 4px rgba(255, 90, 130, .9); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-newyork .c7ft-etat-actif { background: rgba(10, 6, 14, .9); color: #ff8aa3; border: 2px solid #ff6b8b; box-shadow: 0 0 10px rgba(255, 80, 120, .8); text-shadow: 0 0 6px rgba(255, 90, 130, .9); }
 
 /* Montagnes Hallucinées : étiquettes de carnet à double filet, cachet de cire */
-.application.coc7.sheet.investigator.c7ft-montagnes .c7ft-etat { border: 3px double var(--ft-line); border-radius: 4px; }
-.application.coc7.sheet.investigator.c7ft-montagnes .c7ft-etat.actif { background: radial-gradient(circle at 35% 30%, #b3332e, #7a1414 70%); color: #f6e9c8; border: 3px double #e8d7a8; }
-.application.coc7.sheet.investigator.c7ft-montagnes .c7ft-etat-actif { background: radial-gradient(circle at 35% 30%, rgba(179, 51, 46, .95), rgba(122, 20, 20, .95) 70%); color: #f6e9c8; border: 3px double #e8d7a8; text-transform: none; font-family: var(--ft-font-label); font-weight: 700; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-montagnes .c7ft-etat { border: 3px double var(--ft-line); border-radius: 4px; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-montagnes .c7ft-etat.actif { background: radial-gradient(circle at 35% 30%, #b3332e, #7a1414 70%); color: #f6e9c8; border: 3px double #e8d7a8; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-montagnes .c7ft-etat-actif { background: radial-gradient(circle at 35% 30%, rgba(179, 51, 46, .95), rgba(122, 20, 20, .95) 70%); color: #f6e9c8; border: 3px double #e8d7a8; text-transform: none; font-family: var(--ft-font-label); font-weight: 700; }
 
 /* New York 2026 : puces arrondies */
-.application.coc7.sheet.investigator.c7ft-ny2026 .c7ft-etat { border: 1px solid var(--ft-line); border-radius: 999px; background: var(--ft-panel); }
-.application.coc7.sheet.investigator.c7ft-ny2026 .c7ft-etat.actif { background: #d32f2f; border-color: #d32f2f; }
-.application.coc7.sheet.investigator.c7ft-ny2026 .c7ft-etat-actif { border-radius: 8px; background: rgba(211, 47, 47, .94); border: none; text-transform: none; font-family: var(--ft-font-label); font-weight: 700; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-ny2026 .c7ft-etat { border: 1px solid var(--ft-line); border-radius: 999px; background: var(--ft-panel); }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-ny2026 .c7ft-etat.actif { background: #d32f2f; border-color: #d32f2f; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-ny2026 .c7ft-etat-actif { border-radius: 8px; background: rgba(211, 47, 47, .94); border: none; text-transform: none; font-family: var(--ft-font-label); font-weight: 700; }
 
 /* Antarctique 2026 : affichage tête haute, verre fumé, alerte rouge */
-.application.coc7.sheet.investigator.c7ft-antarctique2026 .c7ft-etat { border: 1px solid var(--ft-line); border-radius: 0; background: rgba(255, 255, 255, .55); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); text-transform: uppercase; letter-spacing: .04em; }
-.application.coc7.sheet.investigator.c7ft-antarctique2026 .c7ft-etat.actif { background: rgba(200, 40, 40, .85); border-color: #ff8a80; color: #fff; box-shadow: none; }
-.application.coc7.sheet.investigator.c7ft-antarctique2026 .c7ft-etat-actif { background: rgba(120, 10, 10, .82); border: 1px solid #ff8a80; color: #ffd6d2; box-shadow: 0 0 10px rgba(255, 60, 60, .55); clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); letter-spacing: .02em; font-size: 13px; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-antarctique2026 .c7ft-etat { border: 1px solid var(--ft-line); border-radius: 0; background: rgba(255, 255, 255, .55); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); text-transform: uppercase; letter-spacing: .04em; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-antarctique2026 .c7ft-etat.actif { background: rgba(200, 40, 40, .85); border-color: #ff8a80; color: #fff; box-shadow: none; }
+body .application:is(.coc7.sheet, .coc7-actor-sheet).investigator.c7ft-antarctique2026 .c7ft-etat-actif { background: rgba(120, 10, 10, .82); border: 1px solid #ff8a80; color: #ffd6d2; box-shadow: 0 0 10px rgba(255, 60, 60, .55); clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); letter-spacing: .02em; font-size: 13px; }
